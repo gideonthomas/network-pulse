@@ -243,7 +243,7 @@ let Service = {
     }
   },
   logout: function() {
-    return callURL(`${pulseAPI}/logout/`);
+    return callURL(`http://test.example.com:8000/accounts/logout/`);
   },
   userstatus: function() {
     return getDataFromURL(`${pulseAPI}/userstatus/`);

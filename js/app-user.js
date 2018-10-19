@@ -13,7 +13,7 @@ const Login = {
    * Generates the oauth url for logging a user in, with a redirect-when-finished URL
    */
   getLoginURL(redirectUrl) {
-    return `${env.PULSE_API}/login?original_url=${encodeURIComponent(redirectUrl)}`;
+    return `http://test.example.com:8000/accounts/login?next=${encodeURIComponent(redirectUrl)}`;
   },
 
   /*
@@ -133,7 +133,7 @@ class User {
     this.notifyListeners(`logged out`);
 
     Login.logout(error => {
-      console.log(`logout error:`, error);
+      alert(`logout error:`, error);
     });
   }
 
